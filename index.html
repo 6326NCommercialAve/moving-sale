@@ -18,14 +18,6 @@ body {
     padding: 60px 20px;
     text-align: center;
 }
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
 .container {
     max-width: 1000px;
     margin: -40px auto 40px;
@@ -38,7 +30,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .card {
     flex: 1;
@@ -47,24 +39,26 @@ body {
     padding: 20px;
     border-radius: 12px;
 }
-.card strong {
-    display: block;
-    font-size: 0.9rem;
-    color: #555;
-}
-.card span {
-    font-size: 1.2rem;
+.card a {
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
 }
-.section-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
 }
+.section-title { font-size: 1.5rem; margin: 20px 0 10px; }
 .featured {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
-    margin-bottom: 30px;
 }
 .feature-card {
     background: linear-gradient(135deg, #eef2ff, #e0e7ff);
@@ -72,28 +66,10 @@ body {
     padding: 18px;
     font-weight: 600;
 }
-.feature-card span {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: #555;
-    margin-top: 5px;
-}
-.items {
-    columns: 2;
-}
-@media(max-width: 600px){
-    .items { columns: 1; }
-}
-.item {
-    margin-bottom: 8px;
-}
-.footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #777;
-}
+.items { columns: 2; }
+@media(max-width:600px){ .items { columns:1; } }
+.item { margin-bottom: 8px; }
+.footer { text-align:center; margin-top:30px; font-size:0.9rem; color:#777; }
 </style>
 </head>
 <body>
@@ -108,7 +84,7 @@ body {
 <div class="details">
     <div class="card">
         <strong>📍 Location</strong>
-        <span>6326 N Commercial Ave</span>
+        <span><a href="https://www.google.com/maps/search/?api=1&query=6326+N+Commercial+Ave" target="_blank">6326 N Commercial Ave</a></span>
     </div>
     <div class="card">
         <strong>📅 Date</strong>
@@ -120,69 +96,38 @@ body {
     </div>
 </div>
 
-<div>
-    <div class="section-title">Top Items</div>
-    <div class="featured">
-        <div class="feature-card">West Elm Leather Couch<span>Premium, modern statement piece</span></div>
-        <div class="feature-card">Frame TV<span>Art-style display, beautiful when off</span></div>
-        <div class="feature-card">Upright Piano<span>Great for families & musicians</span></div>
-        <div class="feature-card">Rowing Machine<span>Excellent full-body workout</span></div>
-        <div class="feature-card">Adjustable Standing Desk<span>Work-from-home upgrade</span></div>
-        <div class="feature-card">West Elm Media Cabinet<span>Stylish storage solution</span></div>
-    </div>
+<a href="https://www.google.com/maps/search/?api=1&query=6326+N+Commercial+Ave" class="button">📍 Get Directions</a>
+
+<div class="section-title">Top Items</div>
+<div class="featured">
+    <div class="feature-card">West Elm Leather Couch</div>
+    <div class="feature-card">Frame TV</div>
+    <div class="feature-card">Upright Piano</div>
+    <div class="feature-card">Rowing Machine</div>
+    <div class="feature-card">Adjustable Standing Desk</div>
+    <div class="feature-card">West Elm Media Cabinet</div>
 </div>
 
-<div>
-    <div class="section-title">All Available Items</div>
-    <div class="items">
-        <div class="item">Kids Playhouse</div>
-        <div class="item">AC Units</div>
-        <div class="item">Hanging Swings</div>
-        <div class="item">Upright Freezer</div>
-        <div class="item">Storage Cabinets</div>
-        <div class="item">West Elm Media Cabinet</div>
-        <div class="item">Frame TV</div>
-        <div class="item">Dining Table</div>
-        <div class="item">Adjustable Standing Desk</div>
-        <div class="item">Office Chair</div>
-        <div class="item">Large Computer Monitors (2)</div>
-        <div class="item">Queen Bed Frame</div>
-        <div class="item">Like-New Queen Mattress</div>
-        <div class="item">Bedding</div>
-        <div class="item">Home Decor</div>
-        <div class="item">Dog Kennel</div>
-        <div class="item">Outdoor Tools</div>
-        <div class="item">Outdoor Toys</div>
-        <div class="item">Ridealong Kids Truck</div>
-        <div class="item">Electric Foot Massager</div>
-        <div class="item">Luggage</div>
-        <div class="item">Toddler Clothes (2T–3T)</div>
-        <div class="item">Kids Books</div>
-        <div class="item">Storage Ottoman</div>
-        <div class="item">Pottery Barn Barstools (4)</div>
-        <div class="item">Guitar Hero Drum Set</div>
-        <div class="item">Carpet Cleaner</div>
-        <div class="item">Norwex Mop (like new)</div>
-        <div class="item">Sheet Music (Piano & Violin)</div>
-        <div class="item">Upright Piano</div>
-        <div class="item">Space Heaters</div>
-        <div class="item">Snow Sled</div>
-        <div class="item">Air Filter</div>
-        <div class="item">Road Bike</div>
-        <div class="item">BBQ Grill</div>
-        <div class="item">Rowing Machine</div>
-        <div class="item">Dehumidifier</div>
-        <div class="item">Charlie Crane Baby Rocker</div>
-        <div class="item">Melissa & Doug Store</div>
-        <div class="item">Play Kitchen</div>
-    </div>
+<div class="section-title">All Available Items</div>
+<div class="items">
+Kids Playhouse<br>AC Units<br>Hanging Swings<br>Upright Freezer<br>
+Storage Cabinets<br>West Elm Media Cabinet<br>Frame TV<br>Dining Table<br>
+Adjustable Standing Desk<br>Office Chair<br>Large Computer Monitors (2)<br>
+Queen Bed Frame<br>Like-New Queen Mattress<br>Bedding<br>Home Decor<br>
+Dog Kennel<br>Outdoor Tools<br>Outdoor Toys<br>Ridealong Kids Truck<br>
+Electric Foot Massager<br>Luggage<br>Toddler Clothes (2T–3T)<br>
+Kids Books<br>Storage Ottoman<br>Pottery Barn Barstools (4)<br>
+Guitar Hero Drum Set<br>Carpet Cleaner<br>Norwex Mop (like new)<br>
+Sheet Music<br>Upright Piano<br>Space Heaters<br>Snow Sled<br>
+Air Filter<br>Road Bike<br>BBQ Grill<br>Rowing Machine<br>
+Dehumidifier<br>Charlie Crane Baby Rocker<br>Melissa & Doug Store<br>
+Play Kitchen
 </div>
 
 <div class="footer">
-    First come, first served — cash & Venmo accepted!
+First come, first served — cash & Venmo accepted!
 </div>
 
 </div>
-
 </body>
 </html>
